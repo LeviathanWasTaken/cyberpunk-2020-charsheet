@@ -1,0 +1,817 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Libre+Barcode+39+Text&display=swap');
+
+/*SETUP*/
+.ui-dialog .charsheet select,
+.ui-dialog .charsheet textarea,
+.ui-dialog .charsheet input,
+.ui-dialog .charsheet .uneditable-input,
+.ui-dialog .charsheet label,
+.ui-dialog .charsheet button{
+    all: unset;
+}
+
+/*Firefox spinner buttons mod*/
+/*by default is not visible*/
+.charsheet input[Type="number"]{
+    -moz-appearance: textfield;
+}
+/* hover over reveals buttons*/
+.charsheet input[Type="number"]:hover{
+    -moz-appearance: textfield;
+}
+/* Chrome, Safari, Edge, Opera spinner buttons*/
+/*by default is not visible*/
+.charsheet input[type="number"]::-webkit-inner-spin-button,
+.charsheet input[type="number"]::-webkit-outer-spin-button {
+    display: none;
+}
+/* hover over reveals buttons*/
+.charsheet input[type="number"]:hover::-webkit-inner-spin-button,
+.charsheet input[type="number"]:hover::-webkit-outer-spin-button {
+    display: none;
+}
+.ui-dialog .charsheet button[type="roll"] {
+    font-size: 14px;
+    background-color: #FBFBFC;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ui-dialog .charsheet button[type="roll"]::before {
+    content: '';
+}
+
+.ui-dialog .charsheet button[type="roll"]:hover {
+    filter: brightness(90%);
+    cursor: pointer;
+}
+/*END OF SETUP*/
+
+/*COPYPASTA FROM cyberpunk-css by alddesign: https://github.com/alddesign/cyberpunk-css */
+.cyber-input::before {
+    content: 'X';
+    color: transparent;
+    position: absolute;
+    width: calc(200px - 3rem);
+    display: block;
+    padding: 0 2rem 0.2rem 1rem;
+    background-color: #FBFBFC;
+    clip-path: polygon(0 calc(100% - 10px), 10px 100%, 100% 100%, 100% calc(100% - 8px), calc(100% - 20px) calc(100% - 8px), calc(100% - 20px - 8px) calc(100% - 2px), 11px calc(100% - 2px), 0 calc(100% - 13px));
+}
+
+.cyber-input input {
+    padding-left: 2rem !important;
+    color: #FBFBFC !important;
+    font-family: Changa, serif !important;
+    font-size: 14px !important;
+}
+
+.cyber-button,
+.cyber-button-small,
+.cyber-button-big
+{
+    --button-border: 4px;
+    --button-font-size: 1.4rem;
+    --button-padding-v: 0.9rem;
+    --button-padding-h: 2.5rem;
+
+    --tag-font-size: 0.55rem;
+
+    --button-cutout: 1.1rem;
+
+    --button-shadow-primary: cyan;
+    --button-shadow-secondary: yellow;
+    --button-shimmy-distance: 5;
+
+    --button-clip-1: polygon(0 2%, 100% 2%, 100% 95%, 95% 95%, 95% 90%, 85% 90%, 85% 95%, 8% 95%, 0 70%);
+    --button-clip-2: polygon(0 78%, 100% 78%, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 78%);
+    --button-clip-3: polygon(0 44%, 100% 44%, 100% 54%, 95% 54%, 95% 54%, 85% 54%, 85% 54%, 8% 54%, 0 54%);
+    --button-clip-4: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
+    --button-clip-5: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
+    --button-clip-6: polygon(0 40%, 100% 40%, 100% 85%, 95% 85%, 95% 85%, 85% 85%, 85% 85%, 8% 85%, 0 70%);
+    --button-clip-7: polygon(0 63%, 100% 63%, 100% 80%, 95% 80%, 95% 80%, 85% 80%, 85% 80%, 8% 80%, 0 70%);
+
+    --button-clip: polygon(0 0, 100% 0, 100% 100%, 95% 100%, 95% 90%, 80% 90%, 80% 100%, var(--button-cutout) 100%, 0 calc(100% - var(--button-cutout)));
+
+    cursor: pointer !important;
+    background: transparent !important;
+    text-transform: uppercase  !important;
+    font-size: var(--button-font-size)  !important;
+    font-weight: 700  !important;
+    letter-spacing: 2px  !important;
+    padding: var(--button-padding-v) var(--button-padding-h)  !important;
+    outline: transparent  !important;
+    position: relative  !important;
+    border: 0  !important;
+    transition: background 0.2s  !important;
+}
+
+/*Overriding*/
+.cyber-button-small
+{
+    --button-padding-v: 0.5rem;
+    --button-padding-h: 1.2rem;
+    --button-font-size: 1.0rem;
+    --button-cutout: 0.77rem;
+}
+
+.cyber-button-big
+{
+    --button-padding-v: 1.1rem;
+    --button-padding-h: 3.0rem;
+    --button-font-size: 1.75rem;
+    --button-cutout: 1.44rem;
+}
+
+.cyber-button:hover,
+.cyber-button-small:hover,
+.cyber-button-big:hover
+{
+    filter: brightness(90%) !important;
+}
+
+.cyber-button:after,
+.cyber-button-small:after,
+.cyber-button-big:after,
+.cyber-button:before,
+.cyber-button-small:before,
+.cyber-button-big:before
+{
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0  !important;
+    bottom: 0  !important;
+    clip-path: var(--button-clip)  !important;
+    z-index: 0  !important;
+}
+
+
+.cyber-button:after,
+.cyber-button-small:after,
+.cyber-button-big:after
+{
+    background-color: #FBFBFC ;
+}
+
+.cyber-check,
+.cyber-radio
+{
+    width: 11px !important;
+    height: 11px !important;
+    border: 2px solid #FBFBFC !important;
+    /*border-radius: 3px !important;*/
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    outline: none !important;
+    vertical-align: middle !important;
+    margin: 0 !important;
+    cursor: pointer !important;
+}
+
+.cyber-check::before,
+.cyber-radio::before
+{
+    content: "";
+    width: 9px;
+    height: 9px;
+    background-color: #FBFBFC;
+    position: relative;
+    /*top: calc((10px - 8px) / 2);*/
+    /*left: calc((10px - 8px) / 2);*/
+    display: block;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: 120ms transform ease-in-out;
+    transition: 120ms transform ease-in-out;
+
+}
+
+.cyber-check:checked:before,
+.cyber-radio:checked:before
+{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.cyber-radio
+{
+    border-radius: 50%;
+}
+
+.cyber-radio::before
+{
+    border-radius: 50%;
+}
+
+label
+{
+    vertical-align: middle;
+}
+/* END OF COPYPASTA*/
+
+/* MAIN */
+main {
+    width: 900px;
+    height: 810px;
+    background-color: black;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(90deg, rgba(255, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(rgba(255, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 2px 2px;
+    box-shadow: 0 0 20px #ff0000;
+}
+
+main::before{
+    animation: glitch 1s infinite;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+            90deg,
+            rgba(242, 51, 34, 0.1) 0,
+            rgba(242, 51, 34, 0.1) 1px,
+            transparent 1px,
+            transparent 3px
+    );
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: 3;
+}
+
+main::after{
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    mix-blend-mode: difference;
+    background: linear-gradient(90deg, rgba(242,51,34,1) 0%, rgba(219,47,32,1) 21%, rgba(242,51,34,1) 45%, rgba(219,47,32,1) 70%, rgba(242,51,34,1) 100%);
+    animation: scan 2s infinite;
+    opacity: 0.7;
+    z-index: 3;
+    pointer-events: none;
+}
+/*END OF MAIN*/
+
+/*FIRST PAGE*/
+.first-page-container {
+    display: grid;
+    grid-template-columns: 100px 390px 340px;
+    grid-template-rows: 280px 70px 210px 130px 40px;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+/*INFO SECTION*/
+.info-section {
+    grid-column: 1/3;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 130px 360px;
+    column-gap: 20px;
+}
+.info-section h1 {
+    grid-column: 1/3;
+    font-family: Changa, serif;
+    font-size: 20px;
+    letter-spacing: 0.7em;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.info-section h2 {
+    grid-column: 1/3;
+    font-family: "Libre Barcode 39 Text", serif;
+    color: #FBFBFC;
+    font-size: 26px;
+    margin: 0 0 10px;
+    padding: 0;
+    text-align: center;
+}
+
+.info-section span, .info-section strong {
+    font-family: Changa, serif;
+    font-weight: 500;
+    color: #FBFBFC;
+    font-size: 16px;
+}
+
+#character-pic {
+    grid-column: 1;
+    grid-row: 3/6;
+    width: 120px;
+    height: 120px;
+}
+
+#image-frame-background {
+    position: relative;
+    top: 10px;
+    left: 0;
+    width: 130px;
+    height: 120px;
+    background-color: white;
+    z-index: 0;
+    clip-path: polygon(100% 0, 100% 25%, 95% 33%, 95% 100%, 0 100%, 0 83%, 5% 75%, 5% 0);
+}
+
+#character-pic img {
+    position: absolute;
+    top: 120px;
+    left: 35px;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+    filter: opacity(0.6);
+}
+
+.info-section label {
+    grid-column: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-section-role {
+    grid-column: 2;
+    row-gap: 2px;
+    display: grid;
+    grid-template-columns: 16rem 1fr;
+    margin-bottom: 2px;
+}
+
+.info-section-role button {
+    text-align: center !important;
+}
+
+.info-section-role button span {
+    font-size: 14px;
+    color: black;
+    height: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.info-section-role button:hover {
+    cursor: pointer;
+}
+
+.info-section-role-span {
+    background-color: #FBFBFC;
+    color: black;
+    text-align: center;
+    align-content: center;
+}
+
+.info-section-othershit {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    row-gap: 2px;
+    margin-top: 2px;
+}
+
+.info-section-othershit input {
+    font-family: Changa, serif !important;
+    width: 100% !important ;
+    padding: 0 2rem 0.4rem 2rem !important;
+    border: none;
+    color: #FBFBFC !important ;
+    font-size: 14px !important;
+}
+
+#initiative-btn-div {
+    grid-column: 1;
+    grid-row: 6;
+    position: relative;
+    top: 2rem;
+}
+
+#initiative-btn-div button span {
+    color: black !important;
+    position: relative;
+    z-index: 1;
+}
+/*END OF INFO SECTION*/
+
+/*STATS SECTION*/
+.stats-section {
+    grid-column: 1;
+    grid-row: 2/6;
+    background-color: #FBFBFC;
+    padding: 5px 20px 5px 10px;
+    display: grid;
+    grid-template-columns: 70px;
+    row-gap: 5px;
+    justify-items: center;
+    clip-path: polygon(0 3%, 0 100%, 90% 100%, 100% 97%, 100% 56%, 85% 55%, 85% 43%, 100% 41%, 90% 39%, 90% 13%, 100% 10%, 100% 0, 10% 0);
+}
+
+.stat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-values-btn {
+    background-color: black !important;
+    padding: 2px 7px !important;
+}
+
+.stat-values-btn strong {
+    font-size: 16px;
+    color: white;
+}
+
+.stat-values-btn:hover {
+    filter: brightness(90%) !important;
+    cursor: pointer !important;
+}
+/*END OF STATS SECTION*/
+
+/*CALCULATED STATS SECTION*/
+.calculated-stats-section {
+    background-color: #FBFBFC;
+    grid-column: 2;
+    grid-row: 2;
+    clip-path: polygon(3% 0, 97% 0, 100% 13%, 100% 95%, 66% 95%, 64% 85%, 29% 85%, 28% 100%, 23% 100%, 21% 80%, 0 80%, 0 15%);
+    padding: 10px 10px 15px;
+    display: flex;
+    column-gap: 5px;
+}
+
+.calculated-stat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 7em;
+    justify-content: center;
+}
+
+.calculated-stat-container span {
+    font-family: Changa, serif;
+    font-size: 14px;
+}
+
+.calculated-stats-section .stat-values-btn strong {
+    font-size: 14px;
+}
+/*END OF CALCULATED STATS SECTION*/
+
+/* HEALTH SECTION*/
+.health-section {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+#trauma-logo {
+    position: absolute;
+    width: 200px;
+    top: 385px;
+    left: 170px;
+}
+
+#heartbeat-container {
+    position: absolute;
+    top: 385px;
+    left: 397px;
+    width: 130px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #FBFBFC;
+}
+
+#heartbeat {
+    /*clip-path: polygon(0 45%, 30% 45%, 35% 30%, 40% 45%, 45% 45%, 47% 55%, 50% 0, 52% 0, 55% 70%, 57% 45%, 62% 45%, 66% 40%, 70% 45%, 100% 45%, 100% 55%, 70% 55%, 66% 50%, 62% 55%, 59% 55%, 56% 80%, 54% 80%, 51% 10%, 47% 65%, 45% 55%, 40% 55%, 35% 40%, 30% 55%, 0 55%);*/
+    width: 130px;
+    height: 40px;
+    animation: pulsate 0.8s infinite;
+}
+
+#health-status {
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid #FBFBFC;
+    width: 120px;
+    padding: 0.2em 0.5em 0;
+}
+
+#health-status h4 {
+    color: #FBFBFC;
+    font-size: 12px;
+}
+
+.health-section {
+    margin-top: 25px;
+}
+
+.health-section-body {
+    padding-left: 3px;
+}
+
+.health-bars {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 50% 50%;
+    width: 100%;
+    padding-top: 15px;
+    border-right: 2px solid #FBFBFC;
+    margin-left: -2px;
+    row-gap: 5px;
+    margin-bottom: 10px;
+}
+
+.health-selectors label span {
+    color: #FBFBFC;
+    padding-left: 3px;
+    font-family: Changa, serif;
+}
+
+.health-bar-container {
+    text-align: center;
+}
+
+.health-bar-container h4 {
+    color: #FBFBFC;
+}
+
+.health-bar-container i {
+    background-color: #FBFBFC;
+    display: block;
+    width: 100%;
+    color: black;
+    font-family: Changa, serif;
+}
+
+.health-footer {
+    width: calc(100% + 2px);
+    height: 50px;
+    background-color: #FBFBFC;
+    padding-top: 5px;
+    margin-left: -2px;
+    display: grid;
+    grid-template-columns: 12% 12% 12% 12% 12% 40%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 99% 40%, 99% 58%, 100% 61%, 100% 90%, 98% 100%, 73% 100%, 71% 90%, 4% 90%, 0 65%);
+}
+
+.health-footer div {
+    text-align: center;
+    font-family: Changa, serif;
+}
+
+.health-footer .cyber-button-small {
+    width: 130px !important;
+    height: 30px;
+}
+
+.health-footer .cyber-button-small::before,
+.health-footer .cyber-button-small::after {
+    background-color: black;
+    width: 130px;
+    height: 30px;
+}
+/* END OF HEALTH SECTION*/
+
+/* ARMOR SECTION */
+
+/*END OF ARMOR SECTION */
+
+/*ANIMATIONS+COPYPASTA ^_^ */
+
+@keyframes pulsate {
+    0% {
+        pause: 0.1s;
+        clip-path: polygon(0 45%, 0 55%);
+        background-color: #FBFBFC;
+    }
+    5% {
+        clip-path: polygon(0 45%, 5% 45%, 5% 55%, 0 55%);
+        background-color: #FBFBFC;
+    }
+    10% {
+        clip-path: polygon(0 45%, 10% 45%, 10% 55%, 0 55%);
+        background-color: #FBFBFC;
+    }
+    15% {
+        clip-path: polygon(0 45%, 15% 45%, 15% 55%, 0 55%);
+        background-color: #FBFBFC;
+    }
+    20% {
+        clip-path: polygon(0 45%, 20% 45%, 20% 55%, 0 55%);
+        background-color: #FBFBFC;
+    }
+    25% {
+        clip-path: polygon(0 45%, 25% 45%, 25% 55%, 0 55%);
+        background-color: #FBFBFC;
+    }
+    30% {
+        clip-path: polygon(0 45%, 30% 45%, 30% 55%, 0 55%);
+        background-color: #FBFBFC;
+    }
+    35% {
+        clip-path: polygon(0 45%, 30% 45%, 35% 30%, 35% 40%, 30% 55%, 0 55%);
+        background-color: #FBFBFC;
+    }
+    40% {
+        clip-path: polygon(0 45%, 30% 45%, 35% 30%, 40% 45%, 40% 55%, 35% 40%, 30% 55%, 0 55%);
+        background-color: #FBFBFC;
+    }
+    45% {
+        clip-path: polygon(0 45%, 30% 45%, 35% 30%, 40% 45%, 45% 45%, 45% 55%, 40% 55%, 35% 40%, 30% 55%, 0 55%);
+        background-color: #FBFBFC;
+    }
+    47% {
+        clip-path: polygon(0 45%, 30% 45%, 35% 30%, 40% 45%, 45% 45%, 47% 55%, 47% 65%, 45% 55%, 40% 55%, 35% 40%, 30% 55%, 0 55%);
+        background-color: #FBFBFC;
+    }
+    50% {
+        clip-path: polygon(0 45%, 30% 45%, 35% 30%, 40% 45%, 45% 45%, 47% 55%, 50% 0, 51% 10%, 47% 65%, 45% 55%, 40% 55%, 35% 40%, 30% 55%, 0 55%);
+        background-color: #FBFBFC;
+    }
+    52% {
+        clip-path: polygon(0 45%, 30% 45%, 35% 30%, 40% 45%, 45% 45%, 47% 55%, 50% 0, 52% 0, 51% 10%, 47% 65%, 45% 55%, 40% 55%, 35% 40%, 30% 55%, 0 55%);
+        background-color: #FBFBFC;
+    }
+    55% {
+        clip-path: polygon(0 45%, 30% 45%, 35% 30%, 40% 45%, 45% 45%, 47% 55%, 50% 0, 52% 0, 55% 70%, 54% 80%, 51% 10%, 47% 65%, 45% 55%, 40% 55%, 35% 40%, 30% 55%, 0 55%);
+        background-color: #FBFBFC;
+    }
+    57% {
+        clip-path: polygon(0 45%, 30% 45%, 35% 30%, 40% 45%, 45% 45%, 47% 55%, 50% 0, 52% 0, 55% 70%, 57% 45%, 59% 55%, 56% 80%, 54% 80%, 51% 10%, 47% 65%, 45% 55%, 40% 55%, 35% 40%, 30% 55%, 0 55%);
+        background-color: #FBFBFC;
+    }
+    62% {
+        clip-path: polygon(0 45%, 30% 45%, 35% 30%, 40% 45%, 45% 45%, 47% 55%, 50% 0, 52% 0, 55% 70%, 57% 45%, 62% 45%, 62% 55%, 59% 55%, 56% 80%, 54% 80%, 51% 10%, 47% 65%, 45% 55%, 40% 55%, 35% 40%, 30% 55%, 0 55%);
+        background-color: #FBFBFC;
+    }
+    66% {
+        clip-path: polygon(0 45%, 30% 45%, 35% 30%, 40% 45%, 45% 45%, 47% 55%, 50% 0, 52% 0, 55% 70%, 57% 45%, 62% 45%, 66% 40%, 66% 50%, 62% 55%, 59% 55%, 56% 80%, 54% 80%, 51% 10%, 47% 65%, 45% 55%, 40% 55%, 35% 40%, 30% 55%, 0 55%);
+        background-color: #FBFBFC;
+    }
+    70% {
+        clip-path: polygon(0 45%, 30% 45%, 35% 30%, 40% 45%, 45% 45%, 47% 55%, 50% 0, 52% 0, 55% 70%, 57% 45%, 62% 45%, 66% 40%, 70% 45%, 70% 55%, 66% 50%, 62% 55%, 59% 55%, 56% 80%, 54% 80%, 51% 10%, 47% 65%, 45% 55%, 40% 55%, 35% 40%, 30% 55%, 0 55%);
+        background-color: #FBFBFC;
+    }
+    80% {
+        clip-path: polygon(0 45%, 30% 45%, 35% 30%, 40% 45%, 45% 45%, 47% 55%, 50% 0, 52% 0, 55% 70%, 57% 45%, 62% 45%, 66% 40%, 70% 45%, 80% 45%, 80% 55%, 70% 55%, 66% 50%, 62% 55%, 59% 55%, 56% 80%, 54% 80%, 51% 10%, 47% 65%, 45% 55%, 40% 55%, 35% 40%, 30% 55%, 0 55%);
+        background-color: #FBFBFC;
+    }
+    90% {
+        clip-path: polygon(0 45%, 30% 45%, 35% 30%, 40% 45%, 45% 45%, 47% 55%, 50% 0, 52% 0, 55% 70%, 57% 45%, 62% 45%, 66% 40%, 70% 45%, 90% 45%, 90% 55%, 70% 55%, 66% 50%, 62% 55%, 59% 55%, 56% 80%, 54% 80%, 51% 10%, 47% 65%, 45% 55%, 40% 55%, 35% 40%, 30% 55%, 0 55%);
+        background-color: #FBFBFC;
+    }
+    100% {
+        clip-path: polygon(0 45%, 30% 45%, 35% 30%, 40% 45%, 45% 45%, 47% 55%, 50% 0, 52% 0, 55% 70%, 57% 45%, 62% 45%, 66% 40%, 70% 45%, 100% 45%, 100% 55%, 70% 55%, 66% 50%, 62% 55%, 59% 55%, 56% 80%, 54% 80%, 51% 10%, 47% 65%, 45% 55%, 40% 55%, 35% 40%, 30% 55%, 0 55%);
+        background-color: #FBFBFC;
+    }
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0, 0);
+        clip: rect(0, 9999px, 10%, 0);
+    }
+    20% {
+        transform: translate(-5px, 5px);
+        clip: rect(10%, 9999px, 35%, 0);
+    }
+    40% {
+        transform: translate(5px, -5px);
+        clip: rect(20%, 9999px, 60%, 0);
+    }
+    60% {
+        transform: translate(-5px, -5px);
+        clip: rect(15%, 9999px, 45%, 0);
+    }
+    80% {
+        transform: translate(5px, 5px);
+        clip: rect(30%, 9999px, 70%, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+        clip: rect(0, 9999px, 100%, 0);
+    }
+}
+
+@keyframes scan {
+    0% {
+        transform: translate(0, 0);
+        background: linear-gradient(0deg, rgba(242,51,34,1) 0%, rgba(219,47,32,1) 21%, rgba(242,51,34,1) 45%, rgba(219,47,32,1) 70%, rgba(242,51,34,1) 100%);
+    }
+    20% {
+        transform: translate(1px, 1px);
+        background: linear-gradient(0deg, rgba(242,51,34,1) 0%, rgba(219,47,32,1) 25%, rgba(242,51,34,1) 50%, rgba(219,47,32,1) 75%, rgba(242,51,34,1) 100%);
+    }
+    40% {
+        transform: translate(-1px, -1px);
+        background: linear-gradient(0deg, rgba(242,51,34,1) 0%, rgba(219,47,32,1) 25%, rgba(242,51,34,1) 50%, rgba(219,47,32,1) 75%, rgba(242,51,34,1) 100%);
+    }
+    60% {
+        transform: translate(1px, -1px);
+        background: linear-gradient(0deg, rgba(242,51,34,1) 0%, rgba(219,47,32,1) 21%, rgba(242,51,34,1) 45%, rgba(219,47,32,1) 70%, rgba(242,51,34,1) 100%);
+    }
+    80% {
+        transform: translate(-1px, 1px);
+        background: linear-gradient(0deg, rgba(242,51,34,1) 0%, rgba(219,47,32,1) 16%, rgba(242,51,34,1) 40%, rgba(219,47,32,1) 65%, rgba(242,51,34,1) 100%);
+    }
+    100% {
+        transform: translate(0, 0);
+        background: linear-gradient(0deg, rgba(242,51,34,1) 0%, rgba(219,47,32,1) 21%, rgba(242,51,34,1) 45%, rgba(219,47,32,1) 70%, rgba(242,51,34,1) 100%);
+    }
+}
+
+/*description: good for images. Effect of a dying flickering screen. Sometimes bright, sometimes dark.*/
+.cyber-glitch-0
+{
+    animation: cyber-glitch-0 5s linear infinite;
+}
+
+
+@keyframes cyber-glitch-0
+{
+    0% {filter: blur(0) brightness(100%) contrast(100%);}
+    2% {filter: blur(.05rem) brightness(120%) contrast(120%);}
+    4% {filter: blur(.10rem) brightness(150%) contrast(150%);}
+    6% {filter: blur(.20rem) brightness(170%) contrast(170%);}
+    8% {filter: blur(0) brightness(100%) contrast(100%);}
+    10% {filter: blur(0) brightness(100%) contrast(100%);}
+    60% {filter: blur(0) brightness(100%) contrast(100%);}
+    62% {filter: blur(.05rem) brightness(60%) contrast(100%);}
+    64% {filter: blur(.10rem) brightness(40%) contrast(100%);}
+    66% {filter: blur(0) brightness(100%) contrast(100%);}
+    68% {filter: blur(.05rem) brightness(60%) contrast(100%);}
+    70% {filter: blur(.10rem) brightness(40%) contrast(100%);}
+    72% {filter: blur(0) brightness(100%) contrast(100%);}
+    100% {filter: blur(0) brightness(100%) contrast(100%);}
+}
+
+
+.cyber-glitch-1
+{
+    animation: cyber-glitch-1 5s linear infinite;
+}
+
+@keyframes cyber-glitch-1
+{
+    0% {transform: translate(0,0) skew(0deg); filter: invert(0);}
+    1% {transform: translate(0,0) skew(-3deg); filter: invert(0);}
+    2% {transform: translate(0,0) skew(3deg); filter: invert(0);}
+    3% {transform: translate(0,0) skew(0deg); filter: invert(0);}
+    60% {transform: translate(0,0) skew(0deg); filter: invert(0);}
+    61% {transform: translate(0,0) skew(-3deg); filter: invert(0.2);}
+    62% {transform: translate(0,0) skew(0deg); filter: invert(0.2);}
+    63% {transform: translate(0,0) skew(3deg); filter: invert(0.8);}
+    64% {transform: translate(0,0) skew(0deg); filter: invert(0.2);}
+    65% {transform: translate(0,0) skew(0deg); filter: invert(0);}
+}
+
+/*description: good for text, especially underlines. Blinking with different pauses in between.*/
+.cyber-glitch-4
+{
+    animation: cyber-glitch-4 5s linear infinite;
+}
+
+@keyframes cyber-glitch-4
+{
+    0% {visibility: visible;}
+    1% {visibility: hidden;}
+    2% {visibility: hidden;}
+    3% {visibility: visible;}
+
+    20% {visibility: visible;}
+    21% {visibility: hidden;}
+    24% {visibility: hidden;}
+    25% {visibility: visible;}
+
+    40% {visibility: visible;}
+    41% {visibility: hidden;}
+    42% {visibility: hidden;}
+    43% {visibility: visible;}
+
+    44% {visibility: visible;}
+    45% {visibility: hidden;}
+    46% {visibility: hidden;}
+    47% {visibility: visible;}
+
+    60% {visibility: visible;}
+    61% {visibility: hidden;}
+    64% {visibility: hidden;}
+    65% {visibility: visible;}
+
+    70% {visibility: visible;}
+    71% {visibility: hidden;}
+    72% {visibility: hidden;}
+    73% {visibility: visible;}
+
+    100% {visibility: visible;}
+}
+

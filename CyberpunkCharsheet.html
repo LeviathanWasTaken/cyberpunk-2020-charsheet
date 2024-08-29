@@ -1,0 +1,239 @@
+<link rel="stylesheet" href="CyberpunkCharsheet.css">
+<main>
+    <div class="first-page-container">
+        <div class="info-section">
+            <h1>CYBERPUNK 2. 0. 2. 0.</h1>
+            <h2>STYLEOVERSUBSTANCE-ALWAYSTAKEITTOTHEEDGE</h2>
+            <div id="character-pic">
+                <img name="attr_character_avatar">
+                <div id="image-frame-background"></div>
+            </div>
+            <div style="display: grid; grid-template-columns: 16rem 1fr; margin-bottom: 2px">
+                <span>Handle: </span><div class="cyber-input"><input type="text" name="attr_character_name"/></div>
+            </div>
+            <div class="info-section-othershit">
+                <span>Sex: </span><div class="cyber-input"><input type="text" name="attr_sex"></div>
+                <span>Cash: </span><div class="cyber-input eb-input"><input type="number" name="attr_cash"></div>
+            </div>
+            <hr style="color: #FBFBFC; padding: 0; margin: 0 0 5px; border: 1px solid; align-self: center">
+            <div class="info-section-role">
+                <span style="align-content: center">Role: </span><button class="cyber-button-small" type="action" name="act_role_selection"><span>Select </span><span style="font-family: Pictos">|</span></button>
+                <span style="margin: 0 20px">Primary: </span><span class="cyber-input" name="attr_primary_role"></span>
+                <span style="margin: 0 20px">Secondary: </span><span class="cyber-input" name="attr_secondary_role"></span>
+            </div>
+            <div id="initiative-btn-div"><button class="cyber-button-small"><span style="font-family: Pictos">Y</span><span>Initiative</span></button></div>
+        </div>
+        <div class="notes-section">
+
+        </div>
+        <div class="stats-section">
+            <div id="attr-div" class="stat-container">
+                <button type="roll" value="[[d10]]" title="Roll ATTR"><strong>ATTR</strong></button>
+                <button type="act" name="act_edit_attr" title="Edit ATTR" class="stat-values-btn"><strong>[</strong><strong name="attr_attr">10</strong><strong>/</strong><strong name="attr_attr_base">10</strong><strong>]</strong></button>
+            </div>
+            <div id="emp-div" class="stat-container">
+                <button type="roll" value="[[d10]]" title="Roll EMP"><strong>EMP</strong></button>
+                <button type="act" name="act_edit_emp" title="Edit EMP" class="stat-values-btn"><strong>[</strong><strong name="attr_emp">10</strong><strong>/</strong><strong name="attr_emp_base">10</strong><strong>]</strong></button>
+            </div>
+            <div id="body-div" class="stat-container">
+                <button type="roll" value="[[d10]]" title="Roll BODY"><strong>BODY</strong></button>
+                <button type="act" name="act_edit_body" title="Edit BODY" class="stat-values-btn"><strong>[</strong><strong name="attr_body">10</strong><strong>/</strong><strong name="attr_body_base">10</strong><strong>]</strong></button>
+            </div>
+            <div id="cool-div" class="stat-container">
+                <button type="roll" value="[[d10]]" title="Roll COOL"><strong>COOL</strong></button>
+                <button type="act" name="act_edit_cool" title="Edit COOL" class="stat-values-btn"><strong>[</strong><strong name="attr_cool">10</strong><strong>/</strong><strong name="attr_cool_base">10</strong><strong>]</strong></button>
+            </div>
+            <div id="int-div" class="stat-container">
+                <button type="roll" value="[[d10]]" title="Roll INT"><strong>INT</strong></button>
+                <button type="act" name="act_edit_int" title="Edit INT" class="stat-values-btn"><strong>[</strong><strong name="attr_int">10</strong><strong>/</strong><strong name="attr_int_base">10</strong><strong>]</strong></button>
+            </div>
+            <div id="ref-div" class="stat-container">
+                <button type="roll" value="[[d10]]" title="Roll REF"><strong>REF</strong></button>
+                <button type="act" name="act_edit_ref" title="Edit REF" class="stat-values-btn"><strong>[</strong><strong name="attr_ref">10</strong><strong>/</strong><strong name="attr_ref_base">10</strong><strong>]</strong></button>
+            </div>
+            <div id="tech-div" class="stat-container">
+                <button type="roll" value="[[d10]]" title="Roll TECH"><strong>TECH</strong></button>
+                <button type="act" name="act_edit_tech" title="Edit TECH" class="stat-values-btn"><strong>[</strong><strong name="attr_tech">10</strong><strong>/</strong><strong name="attr_tech_base">10</strong><strong>]</strong></button>
+            </div>
+            <div id="luck-div" class="stat-container">
+                <button type="roll" value="[[d10]]" title="Roll LUCK"><strong>LUCK</strong></button>
+                <button type="act" name="act_edit_luck" title="Edit LUCK" class="stat-values-btn"><strong>[</strong><strong name="attr_luck">10</strong><strong>/</strong><strong name="attr_luck_base">10</strong><strong>]</strong></button>
+            </div>
+        </div>
+        <div class="calculated-stats-section">
+            <div class="calculated-stat-container">
+                <h4>Hum.</h4>
+                <div><span name="attr_humanity">100</span><span>/</span><span name="attr_humanity_base">100</span></div>
+            </div>
+            <div class="calculated-stat-container">
+                <h4>Run</h4>
+                <div><span name="attr_run">100</span><span>m</span></div>
+            </div>
+            <div class="calculated-stat-container">
+                <h4>Leap</h4>
+                <div><span name="attr_leap">100</span><span>m</span></div>
+            </div>
+            <div class="calculated-stat-container">
+                <h4>Lift</h4>
+                <div><span name="attr_lift">100</span><span>kg</span></div>
+            </div>
+            <div id="initmod-div" class="stat-container">
+                <strong style="line-height: 22px; padding: 2px 10px; margin: 0 2px">Init.M.</strong>
+                <button type="act" name="act_edit_initmod" title="Edit Initiative Modifier" class="stat-values-btn"><strong>[</strong><strong name="attr_initmod">10</strong><strong>]</strong></button>
+            </div>
+            <div id="ma-div" class="stat-container">
+                <button type="roll" value="[[d10]]" title="Roll MA"><strong>MA</strong></button>
+                <button type="act" name="act_edit_ma" title="Edit MA" class="stat-values-btn"><strong>[</strong><strong name="attr_ma">10</strong><strong>/</strong><strong name="attr_ma_base">10</strong><strong>]</strong></button>
+            </div>
+        </div>
+        <div class="armor-section">
+
+        </div>
+        <div class="health-section">
+            <img id="trauma-logo" src="https://i.ibb.co/3f9K67Q/Thumbnails-92.png" alt="">
+            <div id="heartbeat-container"><div id="heartbeat"></div><div id="health-status"><h4>Status:</h4><h4 name="attr_healthstatus">Alive</h4></div></div>
+            <div class="health-section-body">
+                <div class="health-selectors">
+                    <label><input type="checkbox" class="cyber-check" name="attr_ignore_stat_modifiers"><span>Ignore Stat Mods.</span></label>
+                    <label><input type="checkbox" class="cyber-check" name="attr_ignore_save_modifiers"><span>Ignore Save Mods.</span></label>
+                </div>
+                <div class="health-bars">
+                    <div class="health-bar-container">
+                        <h4>Light</h4>
+                        <div class="health-bar">
+                            <input type="checkbox" class="cyber-check" name="attr_inj1">
+                            <input type="checkbox" class="cyber-check" name="attr_inj2">
+                            <input type="checkbox" class="cyber-check" name="attr_inj3">
+                            <input type="checkbox" class="cyber-check" name="attr_inj4">
+                        </div>
+                        <i>Stun=0</i>
+                    </div>
+                    <div class="health-bar-container">
+                        <h4>Serious</h4>
+                        <div class="health-bar">
+                            <input type="checkbox" class="cyber-check" name="attr_inj5">
+                            <input type="checkbox" class="cyber-check" name="attr_inj6">
+                            <input type="checkbox" class="cyber-check" name="attr_inj7">
+                            <input type="checkbox" class="cyber-check" name="attr_inj8">
+                        </div>
+                        <i>Stun=-1</i>
+                    </div>
+                    <div class="health-bar-container">
+                        <h4>Critical</h4>
+                        <div class="health-bar">
+                            <input type="checkbox" class="cyber-check" name="attr_inj9">
+                            <input type="checkbox" class="cyber-check" name="attr_inj10">
+                            <input type="checkbox" class="cyber-check" name="attr_inj11">
+                            <input type="checkbox" class="cyber-check" name="attr_inj12">
+                        </div>
+                        <i>Stun=-2</i>
+                    </div>
+                    <div class="health-bar-container">
+                        <h4>Mortal0</h4>
+                        <div class="health-bar">
+                            <input type="checkbox" class="cyber-check" name="attr_inj13">
+                            <input type="checkbox" class="cyber-check" name="attr_inj14">
+                            <input type="checkbox" class="cyber-check" name="attr_inj15">
+                            <input type="checkbox" class="cyber-check" name="attr_inj16">
+                        </div>
+                        <i>Stun=-3</i>
+                    </div>
+                    <div class="health-bar-container">
+                        <h4>Mortal1</h4>
+                        <div class="health-bar">
+                            <input type="checkbox" class="cyber-check" name="attr_inj17">
+                            <input type="checkbox" class="cyber-check" name="attr_inj18">
+                            <input type="checkbox" class="cyber-check" name="attr_inj19">
+                            <input type="checkbox" class="cyber-check" name="attr_inj20">
+                        </div>
+                        <i>Stun=-4</i>
+                    </div>
+                    <div class="health-bar-container">
+                        <h4>Mortal2</h4>
+                        <div class="health-bar">
+                            <input type="checkbox" class="cyber-check" name="attr_inj21">
+                            <input type="checkbox" class="cyber-check" name="attr_inj22">
+                            <input type="checkbox" class="cyber-check" name="attr_inj23">
+                            <input type="checkbox" class="cyber-check" name="attr_inj24">
+                        </div>
+                        <i>Stun=-5</i>
+                    </div>
+                    <div class="health-bar-container">
+                        <h4>Mortal3</h4>
+                        <div class="health-bar">
+                            <input type="checkbox" class="cyber-check" name="attr_inj25">
+                            <input type="checkbox" class="cyber-check" name="attr_inj26">
+                            <input type="checkbox" class="cyber-check" name="attr_inj27">
+                            <input type="checkbox" class="cyber-check" name="attr_inj28">
+                        </div>
+                        <i>Stun=-6</i>
+                    </div>
+                    <div class="health-bar-container">
+                        <h4>Mortal4</h4>
+                        <div class="health-bar">
+                            <input type="checkbox" class="cyber-check" name="attr_inj29">
+                            <input type="checkbox" class="cyber-check" name="attr_inj30">
+                            <input type="checkbox" class="cyber-check" name="attr_inj31">
+                            <input type="checkbox" class="cyber-check" name="attr_inj32">
+                        </div>
+                        <i>Stun=-7</i>
+                    </div>
+                    <div class="health-bar-container">
+                        <h4>Mortal5</h4>
+                        <div class="health-bar">
+                            <input type="checkbox" class="cyber-check" name="attr_inj33">
+                            <input type="checkbox" class="cyber-check" name="attr_inj34">
+                            <input type="checkbox" class="cyber-check" name="attr_inj35">
+                            <input type="checkbox" class="cyber-check" name="attr_inj36">
+                        </div>
+                        <i>Stun=-8</i>
+                    </div>
+                    <div class="health-bar-container">
+                        <h4>Mortal6</h4>
+                        <div class="health-bar">
+                            <input type="checkbox" class="cyber-check" name="attr_inj37">
+                            <input type="checkbox" class="cyber-check" name="attr_inj38">
+                            <input type="checkbox" class="cyber-check" name="attr_inj39">
+                            <input type="checkbox" class="cyber-check" name="attr_inj40">
+                        </div>
+                        <i>Stun=-9</i>
+                    </div>
+                </div>
+                <div class="health-footer">
+                    <div>
+                        <h4>BTM</h4>
+                        <span name="attr_btm">-4</span>
+                    </div>
+                    <div>
+                        <h4>BDM</h4>
+                        <span name="attr_bdm">2</span>
+                    </div>
+                    <div>
+                        <h4>Stun</h4>
+                        <span name="attr_stun_diff">10</span>
+                    </div>
+                    <div>
+                        <h4>Death</h4>
+                        <span name="attr_death_diff">10</span>
+                    </div>
+                    <div>
+                        <h4>Injure</h4>
+                        <input type="text" name="attr_injures" value="0" max="999" style="width: 4em">
+                    </div>
+                    <div style="margin-left: 10px; margin-right: 10px; margin-top: 3px">
+                        <button class="cyber-button-small"><span style="font-size: 12px;font-weight: 900;letter-spacing: 0.5em;color: #FBFBFC; position: relative;z-index: 1;left: -10px;">SAVE</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="attacks-section">
+
+        </div>
+        <div class="selected-skills-section">
+
+        </div>
+        <div class="tabs-section">
+
+        </div>
+    </div>
+</main>
